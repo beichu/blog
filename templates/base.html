@@ -1,0 +1,113 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> My Blog! </title>
+</head>
+
+<head>
+<title>*FLORAL*</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+
+<style>
+#navcontainer {
+text-align : center;
+letter-spacing : 5px;
+margin-top: 55px;
+}
+
+#banner {
+height : 120px;
+width: 80%;
+padding : 0;
+margin-top : 0;
+margin-left: auto;
+margin-right:auto;
+color : #666;
+background : #18B29D;
+text-align : center;
+position: center;
+}
+#banner h1 {
+letter-spacing : 5px;
+color : #3D4C53;
+background : inherit;
+text-align : center;
+}
+#content {
+margin-top : 10px;
+margin-bottom : 10px;
+color : #666;
+background : #FFF9C8;
+text-align : center;
+}
+#content h2 {
+margin : 0 0 0 0;
+font : 130% verdana, "Trebuchet MS", arial, tahoma, sans-serif;
+padding : 5px;
+text-transform : uppercase;
+letter-spacing : 5px;
+color : #833B0B;
+background : inherit;
+text-align : center;
+}
+
+#footer {
+clear:both;
+position: relative;
+z-index: 1;
+width: 80%;
+margin-left: auto;
+margin-right:auto;
+margin-bottom: 0;
+border-top: 1px solid #eee;
+background: #18B29D;
+} 
+#footer p {
+text-align: center;
+position:relative;
+}
+.boxed {
+border: 1px solid gray ;
+width: 80%;
+padding : 0;
+margin-left: auto;
+margin-right:auto;
+background-color: #B5EBB9;
+word-wrap: break-word;
+}
+
+body{
+background-color: #FFF9C8;
+}
+</style>
+<body>
+  <div id="banner">
+    <h1>Welcome to <span style="color:#70029D;"> my Blog</span></h1>
+    
+    <div id="navcontainer">
+          <p><a href="/">HOMEPAGE</a> | <a id="current" href="/newpost">NEW POST</a> | <a href="/login">LOGIN</a> | <a href="/signup">SIGNUP</a>
+    </div>
+  </div>
+  
+
+    
+  <div id="content">
+        
+    {% block content %}
+    {% endblock %}
+  </div>
+  
+  <div id="container-foot">
+    <div id="footer">
+      <p>
+      {% block footer %}
+      {% endblock %}
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

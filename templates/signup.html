@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> My Blog! </title>
+</head>
+
+<body style = "margin:0">
+
+{% block content %}	
+<form method='post'>
+	<b>Signup</b>
+	<br>Username
+	<input type="text" name="username" value="{{username}}">{{error_username}}
+	<br>Password
+	<input type="text" name="password" value="{{password}}">{{error_password}}
+	<br>Verify Password
+	<input type="text" name="verify" value="{{verify}}">{{error_verify}}
+	<br>Email(optional)
+	<input type="text" name="email" value="{{email}}">{{error_email}}
+	<br>
+	<input type="submit">
+</form>
+{% endblock %}
+
+</body>
+</html>

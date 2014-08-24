@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Title </title>
+</head>
+<body>
+{% block content %}
+{% if blogs %}
+{% for entry in blogs %}
+	<div>
+	<b>{{entry.subject}}</b>
+	<br>
+	<br>
+	{{entry.content}}
+	</div>
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> {{subject}} </title>
+</head>
+<body>
+<div id="content">
+    
+    {% block content %}
+        <div class="boxed">
+            <h2>{{subject}}</h2>
+            <br>
+            {{content}}
+        </div>
+        <br>
+    {% endblock %}
+</div>
+<br>
+{% block footer %}
+Queried <span style="color: #5D1916">{{time}}</span> seconds ago
+{% endblock %}
+</body>
+</html>

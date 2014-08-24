@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Title </title>
+</head>
+<body>
+<div id="block">
+{% block content %}
+    {% if blogs %}
+        {% for entry in blogs %}
+            <div class="boxed">
+                <a href="/blog/{{entry.key().id()}}"><h2>{{entry.subject}}</h2></a>
+                <br>
+                {{entry.content}}
+            </div>
+            <br>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+Queried {{time}} seconds ago
+{% endblock %}
+</div>
+</body>
+</html>
